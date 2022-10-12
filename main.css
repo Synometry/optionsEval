@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    padding: 30px 20px;
+    margin: 0px;
+}
+
+div > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 10px 70px;
+    border-radius: 10px;
+    background-color: rgb(180, 180, 180);
+}
+
+#title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar {
+    width: 50%;
+}
+
+p {
+    margin: 0px;
+}
