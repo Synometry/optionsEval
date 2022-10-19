@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Glory:wght@400;800&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="main.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tool - Options Evaluator</title>
 </head>
+
 <body>
     <div id="title">
         <p>Option Evaluator</p>
         <div id="navbar">
-            <p>
+            <a href="">
                 Tool
-            </p>
-            <p>
+            </a>
+            <a href="">
                 About
-            </p>
-            <p>
+            </a>
+            <a href="">
                 Support
-            </p>
+            </a>
         </div>
     </div>
 
     <div id="inputs">
-        <div>
+        <div class="contracts">
             <p>Contracts</p>
         </div>
         <div>
             <p>Volatility</p>
+            <div>
+                <input type="radio" name="volatility" id="H30" value="H30" checked>
+                <label for="H30">Historical (30-day)</label>
+            </div>
+
+            <div>
+                <input type="radio" name="volatility" id="H90" value="H90">
+                <label for="H90">Historical (90-day)</label>
+            </div>
+
+            <div>
+                <input type="radio" name="volatility" id="H200" value="H200">
+                <label for="H200">Historical (200-day)</label>
+            </div>
+
+            <div>
+                <input type="radio" name="volatility" id="IV" value="IV">
+                <label for="IV">Implied</label>
+            </div>
+
+            <div>
+                <input type="radio" name="volatility" id="CV" value="CV">
+                <label for="CV">Custom</label>
+                <input type="number" name="volatility" min="0.01">
+            </div>
         </div>
         <div>
             <p>Days To Expiration</p>
@@ -39,4 +71,5 @@
 
     </div>
 </body>
+
 </html>
