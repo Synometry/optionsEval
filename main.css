@@ -59,6 +59,12 @@ a, p, label {
 
 /* INPUTS */
 
+div.vline {
+    width: 5px;
+    height: inherit;
+    background-color: #95C4FF;
+}
+
 #inputs {
     display: flex;
     justify-content: space-between;
