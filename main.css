@@ -3,12 +3,14 @@ body {
     flex-direction: column;
     justify-content: space-between;
     
-    padding: 30px 20px;
+    /*padding: 30px 20px;*/
     margin: 0px;
 }
 
 body > div {
-    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /* TITLE/NAV BAR */
@@ -280,10 +282,52 @@ label[for="show-pwp"] {
 #analysis p {
     font-size: 16px;
     margin-right: 15px;
-
 }
 
 #analysis > div {
     display: flex;
     flex-direction: row;
+}
+
+/* Notice */
+
+#msg button {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    
+    height: 22px;
+    border-color: #669AFF;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    background-color: #e6e6e6;
+    font-family: 'Glory', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: inset 0px 11px 5px #ffffff;
+
+    cursor: pointer;
+}
+
+#curtain {
+    margin: 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(3px);
+}
+
+div#msg {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    padding: 30px;
+    text-indent: 20px;
+
+    background-color: #e6e6e6;
+    box-shadow: black 0px 6px 5px;
 }
