@@ -4,19 +4,19 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Glory:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Glory:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 
     <link rel="stylesheet" href="main.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tool - Options Evaluator</title>
+    <title>Options Evaluator - Tool</title>
 </head>
 
 <body>
     <div id="title">
-        <p>Option Evaluator</p>
+        <p>Options Evaluator</p>
         <div id="navbar">
             <a href="">
                 Tool
@@ -33,6 +33,46 @@
     <div id="inputs">
         <div class="contracts">
             <p>Contracts</p>
+            <div>
+
+                <div class="contract">
+                    <select name="contract-side">
+                        <option value="bought">Bought</option>
+                        <option value="sold">Sold</option>
+                    </select>
+                    <select name="contract-type">
+                        <option value="call">Call</option>
+                        <option value="put">Put</option>
+                    </select>
+                    <label for="premium">Premium:</label>
+                    <input class="dollar" id="premium" type="number">
+                    <label for="strike">Strike:</label>
+                    <input class="dollar" id="strike" type="number">
+                    <label for="count">Count:</label>
+                    <input id="count" type="number">
+                    <button type="button">&times</button>
+                </div>
+
+                <div class="contract">
+                    <select name="contract-side">
+                        <option value="bought">Bought</option>
+                        <option value="sold">Sold</option>
+                    </select>
+                    <select name="contract-type">
+                        <option value="call">Call</option>
+                        <option value="put">Put</option>
+                    </select>
+                    <label for="premium">Premium:</label>
+                    <input class="dollar" id="premium" type="number">
+                    <label for="strike">Strike:</label>
+                    <input class="dollar" id="strike" type="number">
+                    <label for="count">Count:</label>
+                    <input id="count" type="number">
+                    <button type="button">&times</button>
+                </div>
+            
+            </div>
+            <button id="add-contract" type="button">+</button>
         </div>
         <div class="vline"></div>
         <div>
@@ -66,11 +106,27 @@
         <div class="vline"></div>
         <div>
             <p>Days To Expiration</p>
+            <input type="number" min="1">
         </div>
     </div>
 
-    <div id="graph">
-
+    <div id="graph-row">
+        <canvas id="canvas"></canvas>
+        <div id="graph-options">
+            <p>Graph Options</p>
+            <label for="show-pnl">
+                <input type="checkbox" id="show-pnl" checked>
+                label
+            </label>
+            <label for="show-p">
+                <input type="checkbox" id="show-p" checked>
+                label
+            </label>
+            <label for="show-pwp">
+                <input type="checkbox" id="show-pwp" checked>
+                label
+            </label>
+        </div>
     </div>
 </body>
 

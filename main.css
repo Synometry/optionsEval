@@ -67,9 +67,9 @@ div.vline {
 
 #inputs {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
-    padding: 10px 70px;
+    padding: 10px 10px;
     border-radius: 10px;
     background-color: #BCE7FF;  
 }
@@ -79,6 +79,75 @@ div.vline {
     font-size: 16px;
     text-decoration: underline;
 }
+
+/* contracts */
+
+.contracts input {
+    width: 50px;
+}
+
+.contract {
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    
+    box-shadow: 0px 3px 4px #00000044;
+}
+
+.contract > label {
+    font-size: 16px;
+}
+
+.contract select, .contract button {
+    height: 22px;
+    border-color: #669AFF;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    background-color: #e6e6e6;
+    font-family: 'Glory', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: inset 0px 11px 5px #ffffff;
+
+    cursor: pointer;
+}
+
+.contract select:hover, .contract button:hover {
+    background-color: #dadada;
+    box-shadow: inset 0px 11px 5px #eeeeee;
+}
+
+.contract select:active, .contract button:active {
+    background-color: #eeeeee;
+    box-shadow: inset 0px 11px 5px #dadada;
+}
+
+#add-contract {
+    height: 20px;
+    width: 20px;
+    padding: 0;
+    border-radius: 0;
+    border-width: 0;
+    background-color: #00000000;
+    font-size: 20px;
+    font-weight: 600;
+
+    color: #6699FF;
+
+}
+
+#add-contract:hover {
+    cursor: pointer;
+    color: #4b72c0;
+}
+
+#add-contract:active {
+    color: #aaaaaa;
+}
+
+/* volatility */
 
 input[type="radio"] {
     appearance: none;
@@ -111,5 +180,77 @@ input[type="radio"]:checked+label+input[type="number"] {
 
 input[type="radio"]+label {
     color: black;
+    font-size: 16px;
+}
+
+/* dte */
+
+input[type="number"] {
+    outline: none;
+    height: 16px;
+    width: 47px;
+    border-color: #669AFF;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: #e6e6e6;
+    
+    font-family: 'Glory', sans-serif;
+    font-size: 14px;
+}
+
+input.dollar {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='16px' width='85px'><text x='2' y='14' fill='gray' font-size='12' font-family='arial'>$</text></svg>");
+    padding-left: 10px;
+}
+/* graph panel */
+
+#graph-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#canvas {
+    flex-grow: 2;
+    border-radius: 10px;
+    border-width: 4px;
+    border-color: #1E6AFF;
+    border-style: solid;
+}
+
+#graph-options {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    margin-left: 5%;
+    width: 30%;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: #e6e6e6;  
+}
+
+#graph-options p {
+    color: #7e7e7e;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+#graph-options > * {
+    margin-bottom: 10px;
+}
+
+label[for="show-pnl"] {
+    color: orange;
+    font-size: 16px;
+}
+
+label[for="show-p"] {
+    color: red;
+    font-size: 16px;
+}
+
+label[for="show-pwp"] {
+    color: blue;
     font-size: 16px;
 }
