@@ -230,27 +230,60 @@ input.dollar {
     background-color: #e6e6e6;  
 }
 
+#graph-options p:first-child {
+    text-decoration: underline;
+    margin-left: 24px;
+}
+
 #graph-options p {
     color: #7e7e7e;
     font-size: 16px;
-    text-decoration: underline;
 }
 
 #graph-options > * {
     margin-bottom: 10px;
 }
 
+#graph-options > label {
+    font-size: 16px;
+}
+
 label[for="show-pnl"] {
     color: orange;
-    font-size: 16px;
 }
 
 label[for="show-p"] {
     color: red;
-    font-size: 16px;
 }
 
 label[for="show-pwp"] {
     color: blue;
+}
+
+/* Analysis */
+
+#analysis {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: #BCE7FF;  
+}
+
+#analysis > p:first-child {
+    color: #1E6AFF;
+    text-decoration: underline;
+}
+
+#analysis p {
     font-size: 16px;
+    margin-right: 15px;
+
+}
+
+#analysis > div {
+    display: flex;
+    flex-direction: row;
 }

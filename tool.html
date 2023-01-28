@@ -114,18 +114,39 @@
         <canvas id="canvas"></canvas>
         <div id="graph-options">
             <p>Graph Options</p>
+            <p>Function Visibility</p>
             <label for="show-pnl">
                 <input type="checkbox" id="show-pnl" checked>
-                label
+                Show profit/loss - f(x)
             </label>
             <label for="show-p">
                 <input type="checkbox" id="show-p" checked>
-                label
+                Show probability - p(x)
             </label>
             <label for="show-pwp">
                 <input type="checkbox" id="show-pwp" checked>
-                label
+                Show prob.-weighted profit - f(x)&#8226p(x)
             </label>
+            <p>Axes Visibility</p>
+            <label for="show-up">
+                <input type="checkbox" id="show-up" checked>
+                Show underlying price upon expiration
+            </label>
+            <p>Misc.</p>
+            <label for="show-ai">
+                <input type="checkbox" id="show-ai" checked>
+                Show axis intercepts
+            </label>
+        </div>
+    </div>
+
+    <div id="analysis">
+        <p>Analysis</p>
+        <div>
+            <p>Probability of Profit:</p><p id="anal-pop">null</p>
+        </div>
+        <div>
+            <p>Expected Profit/Loss:</p><p id="anal-epl">null</p>
         </div>
     </div>
 </body>
