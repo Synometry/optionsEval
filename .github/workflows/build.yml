@@ -9,7 +9,8 @@ jobs:
       - uses: actions/setup-node@v3.6.0
         with:
           node-version: '14'
-      - run: npm install -g typescript
-      - run: tree
-      - run: tsc --project ts/tsconfig.json
-      - run: tree
+      - run: |
+          npm install -g typescript
+          tree
+          tsc --project ts/tsconfig.json
+          tree
