@@ -1,6 +1,9 @@
 name: compile tsc
 run-name: ${{ github.actor }}'s ${{ github.event_name }} triggered compilation of TypeScript.
-on: push
+on:
+  push:
+    paths:
+      - '**.ts'
 jobs:
   compile-typescript:
     runs-on: ubuntu-latest
@@ -9,5 +12,16 @@ jobs:
       - uses: actions/setup-node@v3.6.0
         with:
           node-version: '14'
-      - run: npm install -g typescript
-      - run: tsc --project ${{github.workspace}}/ts/tsconfig.json --rootDir ${{github.workspace}}/ts/ --outDir ${{github.workspace}}/js/
+      - name: Compiling TypeScript
+      - run: |
+          npm install -g typescript
+          echo Directory pre-compilation
+          tree
+          tsc --project ts/tsconfig.json
+          echo Directory post-compilation
+          tree
+      - name: Adding .js to repo
+      - run: |
+          git add js
+          git commit -m 'autocompiled ts - push by ${{github.actor}}'
+          git push
