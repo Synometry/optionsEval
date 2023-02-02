@@ -10,4 +10,6 @@ jobs:
         with:
           node-version: '14'
       - run: npm install -g typescript
+      - run: tree
       - run: tsc --project ts/tsconfig.json --outDir js
+      - run: tree
