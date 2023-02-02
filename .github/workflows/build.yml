@@ -22,4 +22,6 @@ jobs:
           tree
       - name: Adding .js to repo
       - run: |
-          git add
+          git add js
+          git commit -m 'autocompiled ts - push by ${{github.actor}}'
+          git push
