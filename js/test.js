@@ -5,5 +5,4 @@ function test(a, b) {
 let msg = 'hello!!';
 console.log(msg);
 console.log(test(1, 2));
-
 //dummy comment
