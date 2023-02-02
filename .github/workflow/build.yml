@@ -1,0 +1,13 @@
+name: compile tsc
+run-name: ${{ github.actor }}'s ${{ github.event_name }} triggered compilation of TypeScript.
+on: push
+jobs:
+  compile-typescript:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3.6.0
+        with:
+          node-version: '14'
+      - run: npm install -g typescript
+      - run: tsc --project='ts/'
