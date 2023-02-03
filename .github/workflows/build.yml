@@ -22,6 +22,8 @@ jobs:
           tree
       - name: Adding .js to repo
         run: |
+          git config --global user.email github-actions@github.com
+          git config --global user.name github-actions
           git add js
-          git commit -m 'autocompiled ts - push by ${{github.actor}}'
+          git commit -m 'autocompiled ts -> push by ${{github.actor}}'
           git push
