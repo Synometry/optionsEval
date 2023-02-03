@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: '14'
       - name: Compiling TypeScript
-      - run: |
+        run: |
           npm install -g typescript
           echo Directory pre-compilation
           tree
@@ -21,7 +21,7 @@ jobs:
           echo Directory post-compilation
           tree
       - name: Adding .js to repo
-      - run: |
+        run: |
           git add js
           git commit -m 'autocompiled ts - push by ${{github.actor}}'
           git push
