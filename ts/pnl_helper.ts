@@ -63,4 +63,6 @@ function add_contract(type: CONTRACT_TYPE, side: CONTRACT_SIDE, premium: number,
     left_C_0 *= count;
     Right_C_1 *= count;
     Right_C_0 *= count;
+
+    const keys = (Object.keys(expressions) as Array<keyof number>);
 }
