@@ -63,4 +63,5 @@ function add_contract(type, side, premium, strike, count) {
     left_C_0 *= count;
     Right_C_1 *= count;
     Right_C_0 *= count;
+    const keys = Object.keys(expressions);
 }
